@@ -47,5 +47,13 @@ namespace mysignalR.Controllers
 			}
              return "1"; 
         }
+
+
+		[HttpGet]
+		public string Dosth()
+		{
+			DateTime time = DateTime.Now;
+			return time.ToString("yyyy-MM-dd HH:mm:ss");
+		}
 	}
 }

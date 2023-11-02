@@ -36,3 +36,17 @@ function wait3() {
     document.getElementById('sendButton').disabled = false;
     console.log("dosth");
 }
+
+document.getElementById("sendButton1").addEventListener("click", function (event) {
+
+    $.ajax({
+        url: "/Home/Dosth",
+        success: function (data, status) {
+            connection.invoke("SendMessage", "自定义", data).catch(function (err) {
+                return console.error(err.toString());
+            });
+            event.preventDefault();
+        }
+    });
+
+});
