@@ -27,4 +27,12 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         return console.error(err.toString());
     });
     event.preventDefault();
+
+    document.getElementById("sendButton").disabled = true;
+    setTimeout(wait3, 3000);
 });
+
+function wait3() {
+    document.getElementById('sendButton').disabled = false;
+    console.log("dosth");
+}
